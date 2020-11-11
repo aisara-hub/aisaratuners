@@ -10,7 +10,7 @@ an aisaratuner module used for the hyperparameter optimization for keras deep le
 
 ## 1.1 aisaratuner.aisara_keras_tuner.Hp
 
-###Class aisaratuner.aisara_keras_tuner.Hp()
+### Class aisaratuner.aisara_keras_tuner.Hp()
 
 Instantiate a hyperparameter class that acts as a container for the user’s defined hyperparameters.
 
@@ -249,7 +249,7 @@ optimizer.plot_opti_results()
 
 return a visual representation for the hyperparameters solution space (2D, 3D).
 
-** Examples**
+**Examples**
 ```python
 optimizer = akt.HpOptimization(my_hps, myfunc, ['val_acc','val_loss'], ['max','min'], 5, 3, mode='p')
 optimizer.run_opti()
@@ -258,5 +258,6 @@ optimizer.plot_opti_results()
 **output**
 
 ![outpu](./pics/3.JPG)
+
 
 ![outpu](./pics/4.JPG)
