@@ -259,4 +259,4 @@ optimizer.plot_opti_results()
 
 ![output](./pics/3.JPG)
 
-![output](./pics/4.JPG)
+![output](./pics/4.jpg)
