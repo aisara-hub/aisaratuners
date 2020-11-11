@@ -237,9 +237,9 @@ optimizer.plot_opti_results()
 ```
 **output**
 
-![outpu](./pics/1.JPG)
+![output](./pics/1.JPG)
 
-![outpu](./pics/2.JPG)
+![output](./pics/2.JPG)
 
 
 
@@ -257,7 +257,6 @@ optimizer.plot_opti_results()
 ```
 **output**
 
-![outpu](./pics/3.JPG)
+![output](./pics/3.JPG)
 
-
-![outpu](./pics/4.JPG)
+![output](./pics/4.JPG)
