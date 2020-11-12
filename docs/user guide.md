@@ -1,22 +1,22 @@
-# *aisaratuner user guide*
+# *aisaratuners user guide*
 
 
 
-## 1. aisaratuner.aisara_keras_tuner
+## 1. aisaratuners.aisara_keras_tuner
 
-an aisaratuner module used for the hyperparameter optimization for keras deep learning librarary models.
+a module used for the hyperparameter optimization for keras deep learning librarary models.
 
 
 
-## 1.1 aisaratuner.aisara_keras_tuner.Hp
+## 1.1 aisaratuners.aisara_keras_tuner.Hp
 
-### Class aisaratuner.aisara_keras_tuner.Hp()
+### Class aisaratuners.aisara_keras_tuner.Hp()
 
 Instantiate a hyperparameter class that acts as a container for the user’s defined hyperparameters.
 
 
 
-### 1.1.1 aisaratuner.aisara_keras_tuner.Hp.numrange
+### 1.1.1 aisaratuners.aisara_keras_tuner.Hp.numrange
 
 **numrange(name=None, min=None, max=None, type='linear')**
 
@@ -38,7 +38,7 @@ A function which is used to define the numerical hyperparameters.
 
 **Examples**
 ```python
-from aisaratuner import aisara_keras_tuner as akt
+from aisaratuners import aisara_keras_tuner as akt
 my_hps = akt.Hp()
 hp_1 = my_hps.numrange(name= 'numer_hidden_layers', min=3, max=6, type='linear')
 hp_2 = my_hps.numrange(name= 'batch_size', min=10, max=20)
@@ -46,7 +46,7 @@ hp_3 = my_hps.numrange(name= 'lr', min=0.0001, max=0.01, type='log')
 ```
 
 
-### 1.1.2 aisaratuner.aisara_keras_tuner.Hp.remove_hp
+### 1.1.2 aisaratuners.aisara_keras_tuner.Hp.remove_hp
 
 **remove_hp(name=None)**
 
@@ -59,7 +59,7 @@ A function which is used to delete a hyperparameter from Hp class.
     
 **Examples**
 ```python
-from aisaratuner import aisara_keras_tuner as akt
+from aisaratuners import aisara_keras_tuner as akt
 my_hps = akt.Hp()
 hp_1 = my_hps.numrange(name= 'numer_hidden_layers', min=3, max=6, type='linear')
 hp_2 = my_hps.numrange(name= 'batch_size', min=10, max=20)
@@ -71,7 +71,7 @@ my_hps. remove_hp('batch_size')
 ```
 
 
-### 1.1.3 aisaratuner.aisara_keras_tuner.Hp.search_space_boundaries
+### 1.1.3 aisaratuners.aisara_keras_tuner.Hp.search_space_boundaries
 
 #### Property search_space_boundaries
 
@@ -79,7 +79,7 @@ Return pandas dataframe that shows the initial search space boundaries.
 
 **Examples**
 ```python
-from aisaratuner import aisara_keras_tuner as akt
+from aisaratuners import aisara_keras_tuner as akt
 my_hps = akt.Hp()
 hp_1 = my_hps.numrange(name= 'numer_hidden_layers', min=3, max=6, type='linear')
 hp_2 = my_hps.numrange(name= 'batch_size', min=10, max=20)
@@ -90,14 +90,14 @@ print(my_hps.search_space_boundaries)
 
 ![outpu](./pics/search%20boundaries.JPG)
 
-## 1.2 aisaratuner.aisara_keras_tuner.HpOptimization
+## 1.2 aisaratuners.aisara_keras_tuner.HpOptimization
 
-### Class aisaratuner.aisara_keras_tuner.HpOptimization(hp_class=None, model_func=None, opti_paras=None, opti_objects=None, num_trials=5, rounds=3, mode = 'c', aisara_seed = 'variable')
+### Class aisaratuners.aisara_keras_tuner.HpOptimization(hp_class=None, model_func=None, opti_paras=None, opti_objects=None, num_trials=5, rounds=3, mode = 'c', aisara_seed = 'variable')
 
 Instantiate aisara optimizer. There will be multiple Keras models for total **n** number of trials where **n** is num_trials*rounds. The search space will be reduced into small solution areas according to the number of rounds and each round will be investigated with the multiple trials as provided by the user.
 
 **Parameters:**
-* hp_class: aisaratuner.aisara_keras_tuner.Hp class
+* hp_class: aisaratuners.aisara_keras_tuner.Hp class
 
     aisara hyperparameter class that contains user’s defined hyperparameters
 *  model_func:
@@ -120,7 +120,7 @@ Instantiate aisara optimizer. There will be multiple Keras models for total **n*
 * num_trials: int, default 5
 
     number of trials per each round, the recommended value should be between 3-10.  
-* rounds: int, default 3
+* rounds: int or str,  default 3
 
     number of rounds in which the search space is reduced.
     
@@ -128,14 +128,19 @@ Instantiate aisara optimizer. There will be multiple Keras models for total **n*
 * mode: str, default 'c'
 
     the mode in which aisara technology is utilized for hyperparameter optimization. It can be either 'c' or 'p' where 'c' is for commercial use and aisara hyperparameter tuning API key should be provided while 'p' is for free personal use.
-    for commercial use, you can buy aisara hyperparameter tuning API key from [here](https://rapidapi.com/aisara-technology-aisara-technology-default/api/aisara-hyperparameter-tuning)
+* api_key: str
+
+    it should be provided when aisaratuners is  running for commercial use
+    
+    aisara hyperparameter tuning API key can be obtained from [here](https://rapidapi.com/aisara-technology-aisara-technology-default/api/aisara-hyperparameter-tuning)
+     
 * aisara_seed: str, default 'variable'
 
     the seed value during optimization, it can be either 'variable' or 'fixed'
     
 **Examples**
 ```python
-from aisaratuner import aisara_keras_tuner as akt
+from aisaratuners import aisara_keras_tuner as akt
 
 # hp_class
 my_hps = akt.Hp()
@@ -155,12 +160,16 @@ def myfunc(comp, k):
     history = model.fit(normed_train_data, train_labels, epochs=comp['epoch'][k], batch_size=comp['batch_size'][k], validation_data=(normed_test_data,test_labels))
     return model, history
 
+# commercial use
+optimizer = akt.HpOptimization(my_hps, myfunc, ['val_acc','val_loss'], ['max','min'], 5, 3, mode='c', api_key='11441hjfdfd')
+
+# personal use 
 optimizer = akt.HpOptimization(my_hps, myfunc, ['val_acc','val_loss'], ['max','min'], 5, 3, mode='p')
 ```
 
 
 
-### 1.2.1 aisaratuner.aisara_keras_tuner.HpOptimization.run_opti
+### 1.2.1 aisaratuners.aisara_keras_tuner.HpOptimization.run_opti
 
 #### Function run_opti()
 
@@ -172,7 +181,7 @@ optimizer = akt.HpOptimization(my_hps, myfunc, ['val_acc','val_loss'], ['max','m
 optimizer.run_opti()
 ```
 
-### 1.2.2 aisaratuner.aisara_keras_tuner.HpOptimization.opti_results
+### 1.2.2 aisaratuners.aisara_keras_tuner.HpOptimization.opti_results
 
 #### Property opti_results
 
@@ -190,7 +199,7 @@ print(optimizer.opti_results)
 
 
 
-### 1.2.3 aisaratuner.aisara_keras_tuner.HpOptimization.best_model_hps
+### 1.2.3 aisaratuners.aisara_keras_tuner.HpOptimization.best_model_hps
 
 #### Property best_model_hps
 
@@ -208,7 +217,7 @@ print(optimizer.best_model_hps)
 
 
 
-### 1.2.4 aisaratuner.aisara_keras_tuner.HpOptimization.best_model
+### 1.2.4 aisaratuners.aisara_keras_tuner.HpOptimization.best_model
 
 ### Property best_model
 
@@ -223,7 +232,7 @@ best_model = optimizer.best_model
 
 
 
-### 1.2.5 aisaratuner.aisara_keras_tuner.HpOptimization.plot_opti_results
+### 1.2.5 aisaratuners.aisara_keras_tuner.HpOptimization.plot_opti_results
 
 #### Function plot_opti_results()
 
@@ -237,13 +246,13 @@ optimizer.plot_opti_results()
 ```
 **output**
 
-![output](./pics/1.JPG)
+![outpu](./pics/1.jpg)
 
-![output](./pics/2.JPG)
+![outpu](./pics/2.jpg)
 
 
 
-### 1.2.6 aisaratuner.aisara_keras_tuner.HpOptimization.plot_search_space
+### 1.2.6 aisaratuners.aisara_keras_tuner.HpOptimization.plot_search_space
 
 #### Function plot_search_space()
 
@@ -257,6 +266,7 @@ optimizer.plot_opti_results()
 ```
 **output**
 
-![output](./pics/3.JPG)
+![outpu](./pics/3.jpg)
 
-![output](./pics/4.jpg)
+
+![outpu](./pics/4.jpg)

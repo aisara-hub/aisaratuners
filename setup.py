@@ -4,19 +4,19 @@ classifiers = [
     'Development Status :: 5 - Production/Stable',
     'Intended Audience :: AI experts :: keras users',
     'Operating System :: OS Independent',
-    'License :: OSI Approved :: MIT License',
+    'License :: OSI Approved :: ..............',
     'Programming Language :: Python :: 3'
 ]
 
 setup(
-    name='aisaratuner',
+    name='aisaratuners',
     version='0.0.1',
     description='leveraging aisara algorithm for effective hyperparameter tuning',
     long_description=open('README.md').read() + '\n\n' + open('CHANGELOG.txt').read(),
-    url='https://github.com/aisara-hub/aisaratuner',
+    url='https://github.com/aisara-hub/aisaratuners',
     author='AiSara Artificial Intelligence',
     author_email='devs@aisara.ai',
-    license='MIT',
+    license='..................',
     classifiers=classifiers,
     python_requires = '3.6',
     packages=find_packages(exclude = ['tests','data','docs']),

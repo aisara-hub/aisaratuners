@@ -106,7 +106,7 @@ class Hp:
 
 
 class HpOptimization:
-    def __init__ (self, hp_class, model_func, opti_paras, opti_objects, num_trials=5, rounds=3, mode = 'c', aisara_seed = 'variable'):
+    def __init__ (self, hp_class, model_func, opti_paras, opti_objects, num_trials=5, rounds=3, mode = 'c', api_key ='0000', aisara_seed = 'variable'):
         self.hp_class = hp_class
         self.model_func = model_func
         self.opti_para_main = opti_paras[0].strip()
@@ -117,7 +117,7 @@ class HpOptimization:
         self.max_rounds = rounds
         self.aisara_seed = aisara_seed.lower().strip()
         self.run_mode = mode.lower().strip()
-        self.api_key = "b5f25e4629msh7ca75149c0eba65p1ecacajsn579f52cb375a"  # free API key for mode 'p'
+        self.api_key = api_key
 
     def api_subscription(self):
         url = "https://aisara-hyperparameter-tuning.p.rapidapi.com/grid/general_pred"
@@ -136,15 +136,16 @@ class HpOptimization:
                 pass
 
     def license_mode(self):
-        if self.run_mode == 'c':
-            print()
-            print('\033[1m'+"For commercial use, you can buy our API from https://rapidapi.com/aisara-technology-aisara-technology-default/api/aisara-hyperparameter-tuning\n"
-                  'If you are a private user, set the running mode to "p" before you can use our library\n'+'\033[0m')
-            self.api_key = str(input('\033[1m'+'Enter Aisara HPT api key: '+'\033[0m')).strip()
-            print()
-            self.api_subscription()
-        elif self.run_mode == 'p':
-            pass
+        print('\033[1m' + "For commercial use, you can obtain our API from https://rapidapi.com/aisara-technology-aisara-technology-default/api/aisara-hyperparameter-tuning\n"
+                        'If you are a private user, set the mode parameter in HpOptimization class to "p".\n' + '\033[0m')
+
+        if self.run_mode == 'p':
+            self.api_key = "b5f25e4629msh7ca75149c0eba65p1ecacajsn579f52cb375a"  # free API key for mode 'p'
+        elif self.run_mode == 'c':
+            if self.api_key == "b5f25e4629msh7ca75149c0eba65p1ecacajsn579f52cb375a":
+                raise InvalidAPIKey('Incorrect API Key!!... please provide valid API key')
+            else:
+                self.api_subscription()
         else:
             raise UnknownAttribute('unknown running mode!!... mode should be either "c" or "p"')
 
