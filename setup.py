@@ -1,10 +1,10 @@
 from setuptools import setup, find_packages
 
 classifiers = [
-    'Development Status :: 5 - Production/Stable',
+    'Development Status :: Production/Stable',
     'Intended Audience :: AI experts :: keras users',
     'Operating System :: OS Independent',
-    'License :: OSI Approved :: ..............',
+    'License :: OSI Approved :: Wizardry License With Selling Exception',
     'Programming Language :: Python :: 3'
 ]
 
@@ -16,7 +16,7 @@ setup(
     url='https://github.com/aisara-hub/aisaratuners',
     author='AiSara Artificial Intelligence',
     author_email='devs@aisara.ai',
-    license='..................',
+    license='Wizardry License With Selling Exception',
     classifiers=classifiers,
     python_requires = '3.6',
     packages=find_packages(exclude = ['tests','data','docs']),

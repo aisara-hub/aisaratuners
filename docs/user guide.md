@@ -127,7 +127,7 @@ Instantiate aisara optimizer. There will be multiple Keras models for total **n*
     rounds can also be set to 'aisara_auto' where the number of rounds is chosen automatically until the best hyperparameter combinations is achieved (this option takes a longer time).
 * mode: str, default 'c'
 
-    the mode in which aisara technology is utilized for hyperparameter optimization. It can be either 'c' or 'p' where 'c' is for commercial use and aisara hyperparameter tuning API key should be provided while 'p' is for free personal use.
+    the mode in which aisara technology is utilized for hyperparameter optimization. It can be either 'c' or 'p' where 'c' is for commercial use and aisara hyperparameter tuning API key should be provided while 'p' is for free private use.
 * api_key: str
 
     it should be provided when aisaratuners is  running for commercial use
@@ -163,7 +163,7 @@ def myfunc(comp, k):
 # commercial use
 optimizer = akt.HpOptimization(my_hps, myfunc, ['val_acc','val_loss'], ['max','min'], 5, 3, mode='c', api_key='11441hjfdfd')
 
-# personal use 
+# free private use 
 optimizer = akt.HpOptimization(my_hps, myfunc, ['val_acc','val_loss'], ['max','min'], 5, 3, mode='p')
 ```
 

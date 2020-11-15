@@ -142,8 +142,10 @@ class HpOptimization:
         if self.run_mode == 'p':
             self.api_key = "b5f25e4629msh7ca75149c0eba65p1ecacajsn579f52cb375a"  # free API key for mode 'p'
         elif self.run_mode == 'c':
-            if self.api_key == "b5f25e4629msh7ca75149c0eba65p1ecacajsn579f52cb375a":
-                raise InvalidAPIKey('Incorrect API Key!!... please provide valid API key')
+            if self.api_key == "0000":
+                raise InvalidAPIKey('No API Key is provied!!... please provide the API key')
+            elif self.api_key == "b5f25e4629msh7ca75149c0eba65p1ecacajsn579f52cb375a":
+                raise InvalidAPIKey('Incorrect API Key!!... please provide a valid API key')
             else:
                 self.api_subscription()
         else:
