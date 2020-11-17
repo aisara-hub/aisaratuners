@@ -12,7 +12,7 @@ a module used for the hyperparameter optimization for keras deep learning librar
 
 ### Class aisaratuners.aisara_keras_tuner.Hp()
 
-Instantiate a hyperparameter class that acts as a container for the user’s defined hyperparameters.
+Initiate a hyperparameter class that acts as a container for the user’s defined hyperparameters.
 
 
 
@@ -94,7 +94,7 @@ print(my_hps.search_space_boundaries)
 
 ### Class aisaratuners.aisara_keras_tuner.HpOptimization(hp_class=None, model_func=None, opti_paras=None, opti_objects=None, num_trials=5, rounds=3, mode = 'c', aisara_seed = 'variable')
 
-Instantiate aisara optimizer. There will be multiple Keras models for total **n** number of trials where **n** is num_trials*rounds. The search space will be reduced into small solution areas according to the number of rounds and each round will be investigated with the multiple trials as provided by the user.
+Initiate aisara optimizer. There will be multiple Keras models for total **n** number of trials where **n** is num_trials*rounds. The search space will be reduced into small solution areas according to the number of rounds and each round will be investigated with the multiple trials as provided by the user.
 
 **Parameters:**
 * hp_class: aisaratuners.aisara_keras_tuner.Hp class
@@ -246,9 +246,9 @@ optimizer.plot_opti_results()
 ```
 **output**
 
-![outpu](./pics/1.JPG)
+![outpu](./pics/1.jpg)
 
-![outpu](./pics/2.JPG)
+![outpu](./pics/2.jpg)
 
 
 
@@ -266,7 +266,7 @@ optimizer.plot_opti_results()
 ```
 **output**
 
-![outpu](./pics/3.JPG)
+![outpu](./pics/3.jpg)
 
 
 ![outpu](./pics/4.jpg)
