@@ -9,7 +9,7 @@ The number of [AiSara Hyperparameter Tuning](https://rapidapi.com/aisara-technol
 | General Prediction |  1 | check API subscription |
 | LHC |    1   |   for hps sampling  |
 | Fit | depends on number of trials  | calculate the error of each trial |
-| Predict | depends on number of trials  | |  calculate the error of each trial |
+| Predict | depends on number of trials  | calculate the error of each trial |
 | General Prediction | 1  |  for maximum error calculation |
 | General Prediction | 1  |  for objective function calculation |
 
