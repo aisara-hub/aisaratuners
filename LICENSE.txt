@@ -1,0 +1,22 @@
+Copyright (c) 2020 AiSara Artificial Intelligence
+
+The following agreement regarding aisaratuners - referred to as "software" - is made between AiSara Artificial Intelligence - referred to as "licensor" - and anyone who is installing, accessing or in any other way using the software - referred to as "user".
+
+1) The software is distributed for commercial use and private/personal use.
+
+2) Private/personal use allows the user to utilize all the modules, classes, and functions inside the software without ANY CHARGES.
+
+3) Private/personal use also include using the software for competitions (Example: kaggle, Hackathon)
+
+4) For commercial use, the user needs to subscribe to AiSara Hyperparameter Tuning API and provide the obtained API key when initiating HpOptimization class.
+
+5) Before subscribing to AiSara Hyperparameter Tuning API, please visit https://rapidapi.com/aisara-technology-aisara-technology-default/api/aisara-hyperparameter-tuning/details to read about our API TERMS AND CONDITIONS.
+
+6) The user is disallowed to modify, publish, and sub-license the source code of the software without explicit permission from the licensor.
+
+7) ANY PUBLICATION OF THE USE REQUIRES ATTRIBUTION TO (github link: https://github.com/aisara-hub/aisaratuners , in turn, our github needs to point to our Rapid API link: https://rapidapi.com/aisara-technology-aisara-technology-default/api/aisara-hyperparameter-tuning).
+
+8) The software is distributed "as is". No warranty of any kind is expressed or implied. You use at your own risk. Neither the author, the licensor nor the agents of the licensor will be liable for data loss, damages, loss of profits or any other kind of loss while using or misusing this software.
+
+9) USAGE OF THE SOFTWARE DEEMS ACCEPTANCE OF THE TERMS AND CONDITIONS ABOVE.
+
