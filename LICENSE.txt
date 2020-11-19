@@ -12,11 +12,9 @@ The following agreement regarding aisaratuners - referred to as "software" - is 
 
 5) Before subscribing to AiSara Hyperparameter Tuning API, please visit https://rapidapi.com/aisara-technology-aisara-technology-default/api/aisara-hyperparameter-tuning/details to read about our API TERMS AND CONDITIONS.
 
-6) The user is disallowed to modify, publish, and sub-license the source code of the software without explicit permission from the licensor.
+6) ANY PUBLICATION OF THE USE REQUIRES ATTRIBUTION TO (github link: https://github.com/aisara-hub/aisaratuners and Rapid API link: https://rapidapi.com/aisara-technology-aisara-technology-default/api/aisara-hyperparameter-tuning).
 
-7) ANY PUBLICATION OF THE USE REQUIRES ATTRIBUTION TO (github link: https://github.com/aisara-hub/aisaratuners , in turn, our github needs to point to our Rapid API link: https://rapidapi.com/aisara-technology-aisara-technology-default/api/aisara-hyperparameter-tuning).
+7) The software is distributed "as is". No warranty of any kind is expressed or implied. You use at your own risk. Neither the author, the licensor nor the agents of the licensor will be liable for data loss, damages, loss of profits or any other kind of loss while using or misusing this software.
 
-8) The software is distributed "as is". No warranty of any kind is expressed or implied. You use at your own risk. Neither the author, the licensor nor the agents of the licensor will be liable for data loss, damages, loss of profits or any other kind of loss while using or misusing this software.
-
-9) USAGE OF THE SOFTWARE DEEMS ACCEPTANCE OF THE TERMS AND CONDITIONS ABOVE.
+8) USAGE OF THE SOFTWARE DEEMS ACCEPTANCE OF THE TERMS AND CONDITIONS ABOVE.
 
