@@ -8,7 +8,7 @@ classifiers = [
 
 setup(
     name='aisaratuners',
-    version='1.1',
+    version='1.4.1',
     description='leveraging aisara algorithm for effective hyperparameter tuning',
     license = 'LICENSE.txt',
     long_description=open('README.md').read() + '\n\n' + open('CHANGELOG.txt').read(),
@@ -18,5 +18,5 @@ setup(
     classifiers=classifiers,
     python_requires = '>=3.6',
     packages=find_packages(exclude = ['tests','data','docs']),
-    install_requires=['requests', 'pandas', 'numpy','os','json','itertools','random','plotly', 'tensorflow','math']
+    install_requires=['requests', 'pandas', 'numpy','plotly', 'tensorflow >= 1.15']
 )
