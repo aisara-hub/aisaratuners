@@ -17,7 +17,7 @@ setup(
     author='AiSara Artificial Intelligence',
     author_email='devs@aisara.ai',
     classifiers=classifiers,
-    python_requires = '3.6',
+    python_requires = '>=3.6',
     packages=find_packages(exclude = ['tests','data','docs']),
     install_requires=['requests', 'pandas', 'numpy','os','json','itertools','random','plotly', 'tensorflow','math']
 )
