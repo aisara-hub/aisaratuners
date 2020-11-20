@@ -92,7 +92,7 @@ print(my_hps.search_space_boundaries)
 
 ## 1.2 aisaratuners.aisara_keras_tuner.HpOptimization
 
-### Class aisaratuners.aisara_keras_tuner.HpOptimization(hp_class=None, model_func=None, opti_paras=None, opti_objects=None, num_trials=5, rounds=3, mode = 'c', aisara_seed = 'variable')
+### Class aisaratuners.aisara_keras_tuner.HpOptimization(hp_class=None, model_func=None, opti_paras=None, opti_objects=None, num_trials=5, rounds=3, mode = 'c', api_key= None, aisara_seed = 'variable')
 
 Initiate aisara optimizer. There will be multiple Keras models for total **n** number of trials where **n** is num_trials*rounds. The search space will be reduced into small solution areas according to the number of rounds and each round will be investigated with the multiple trials as provided by the user.
 
