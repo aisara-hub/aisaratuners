@@ -1,8 +1,7 @@
 from setuptools import setup, find_packages
 
 classifiers = [
-    'Development Status :: Production/Stable',
-    'Intended Audience :: AI experts :: keras users',
+    'Development Status :: 5 - Production/Stable',
     'Operating System :: OS Independent',
     'Programming Language :: Python :: 3'
 ]
