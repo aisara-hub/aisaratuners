@@ -1,6 +1,6 @@
 # **AiSara Hyperparameter Tuning API And The Number of Calls Need for Optimization Run**
 
-**aisara_keras_tuner module utilizes [AiSara Hyperparameter Tuning API](https://rapidapi.com/aisara-technology-aisara-technology-default/api/aisara-hyperparameter-tuning) for its optimizer where the user just need to call **run_opti()** function after initiating HpOptimization class and automatically several API calls for the different endpoints will be performed.**
+**aisaratuners.aisara_keras_tuner module utilizes [AiSara Hyperparameter Tuning API](https://rapidapi.com/aisara-technology-aisara-technology-default/api/aisara-hyperparameter-tuning) for its optimizer where the user just need to call **run_opti()** function after initiating HpOptimization class and automatically several API calls for the different endpoints will be performed.**
 
 The number of [AiSara Hyperparameter Tuning](https://rapidapi.com/aisara-technology-aisara-technology-default/api/aisara-hyperparameter-tuning) API calls needed for one round in the optimization process can be summarized as follows:
 
