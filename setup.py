@@ -9,7 +9,7 @@ classifiers = [
 
 setup(
     name='aisaratuners',
-    version='0.0.1',
+    version='1.0',
     description='leveraging aisara algorithm for effective hyperparameter tuning',
     license = 'LICENSE.txt',
     long_description=open('README.md').read() + '\n\n' + open('CHANGELOG.txt').read(),
