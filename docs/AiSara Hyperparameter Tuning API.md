@@ -29,6 +29,6 @@ To calculate how many [AiSara Hyperparameter Tuning](https://rapidapi.com/aisara
 
 * run_opti() + plot_search_space()
 
-`api_calls =5+(3+𝟐*number_trials)*(number_rounds-1)+2*(number_rounds-2)`
+`api_calls = 5+(3+𝟐*number_trials)*(number_rounds-1)+2*(number_rounds-2)`
 
 
