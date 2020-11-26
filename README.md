@@ -2,5 +2,6 @@
 
 * **[aisaratuners package on PyPi](https://pypi.org/project/aisaratuners/)**
 * **[aisaratuners documetation](https://github.com/aisara-hub/aisaratuners/blob/master/docs/user%20guide.md)**
+* **[tutorials](https://github.com/aisara-hub/aisaratuners/blob/master/docs/Tutorials.md)**
 * **[AiSara Hyperparameter Tuning API](https://rapidapi.com/aisara-technology-aisara-technology-default/api/aisara-hyperparameter-tuning)**
 * **[AiSara Artificial Intelligence](https://www.aisara.ai/)** 
