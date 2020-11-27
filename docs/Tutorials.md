@@ -9,4 +9,4 @@
 ### 4) Fashion MNIST Dataset - Image Classification [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1ew0maMJ-u_862f9XHiGWJvIS4ABsnWtN?usp=sharing)
 
 ---------------------------------------------------------------------------------------------
-#### **your comments and feedback is highly appreciated** 
+#### **your comment and feedback is highly appreciated** 
