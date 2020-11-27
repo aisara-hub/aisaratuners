@@ -1,4 +1,4 @@
-# you can test the adequacy of aisaratners hyperparameter tuning package using the following datasets:
+# you can test the adequacy of aisaratuners hyperparameter tuning package using the following datasets:
 
 ### 1) Heart Disease Dataset - Binary Classification [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1xK9jW9GU7yCZ6y2JIQWBY_A-2MDg6LTI?usp=sharing)
 
