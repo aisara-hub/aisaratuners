@@ -4,4 +4,5 @@
 * **[aisaratuners documetation](https://github.com/aisara-hub/aisaratuners/blob/master/docs/user%20guide.md)**
 * **[tutorials](https://github.com/aisara-hub/aisaratuners/blob/master/docs/Tutorials.md)**
 * **[AiSara Hyperparameter Tuning API](https://rapidapi.com/aisara-technology-aisara-technology-default/api/aisara-hyperparameter-tuning)**
+* **[aisaratuners article on Medium](https://aisaradeepwadi.medium.com/advance-keras-hyperparameter-tuning-with-aisaratuners-library-78c488ab4d6a)**
 * **[AiSara Artificial Intelligence](https://www.aisara.ai/)** 
