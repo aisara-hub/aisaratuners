@@ -7,3 +7,5 @@
 * **[aisaratuners article on Medium](https://aisaradeepwadi.medium.com/advance-keras-hyperparameter-tuning-with-aisaratuners-library-78c488ab4d6a)**
 * **[promotional video](https://www.youtube.com/watch?v=pFuyb7q28vg&feature=youtu.be&ab_channel=AiSaraEnquiry)**
 * **[AiSara Artificial Intelligence](https://www.aisara.ai/)** 
+
+[![HitCount](http://hits.dwyl.com/aisara-hub/aisaratuners.svg)](http://hits.dwyl.com/aisara-hub/aisaratuners)
