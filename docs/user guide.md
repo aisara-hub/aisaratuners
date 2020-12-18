@@ -4,7 +4,7 @@
 
 ## 1. aisaratuners.aisara_keras_tuner
 
-a module used for the hyperparameter optimization for keras deep learning librarary models.
+a module used for keras hyperparameter optimization.
 
 
 
@@ -12,13 +12,13 @@ a module used for the hyperparameter optimization for keras deep learning librar
 
 ### Class aisaratuners.aisara_keras_tuner.Hp()
 
-Initiate a hyperparameter class that acts as a container for the user’s defined hyperparameters.
+instantiate a hyperparameter class that acts as a container for the user’s defined hyperparameters.
 
 
 
 ### 1.1.1 aisaratuners.aisara_keras_tuner.Hp.numrange
 
-**numrange(name=None, min=None, max=None, type='linear')**
+**numrange(name=None, min=None, max=None, type='int')**
 
 A function which is used to define the numerical hyperparameters.
 
@@ -32,17 +32,18 @@ A function which is used to define the numerical hyperparameters.
 * max: int, float
 
     maximum value assigned for the defined hyperparameter
-* type: str, default 'linear'
+* type: str, default 'int'
 
-    assign the type of defined hyperparameter, it can be either 'linear' or 'log'. 'log' type is recommended to be used for optimizer learning rate
+    assign a type to the defined hyperparameter, it can be either 'int', 'float' or 'log'. 'log' type is recommended to be used for optimizer learning rate
 
 **Examples**
 ```python
 from aisaratuners import aisara_keras_tuner as akt
 my_hps = akt.Hp()
-hp_1 = my_hps.numrange(name= 'numer_hidden_layers', min=3, max=6, type='linear')
-hp_2 = my_hps.numrange(name= 'batch_size', min=10, max=20)
-hp_3 = my_hps.numrange(name= 'lr', min=0.0001, max=0.01, type='log')
+hp_1 = my_hps.numrange(name= 'numer_hidden_layers', min=3, max=6, type='int')
+hp_2 = my_hps.numrange(name= 'batch_size', min=10, max=20, type='int')
+hp_3 = my_hps.numrange(name= 'dropout_2', min=0.1, max=0.5, type='float')
+hp_4 = my_hps.numrange(name= 'lr', min=0.0001, max=0.01, type='log')
 ```
 
 
@@ -61,9 +62,10 @@ A function which is used to delete a hyperparameter from Hp class.
 ```python
 from aisaratuners import aisara_keras_tuner as akt
 my_hps = akt.Hp()
-hp_1 = my_hps.numrange(name= 'numer_hidden_layers', min=3, max=6, type='linear')
-hp_2 = my_hps.numrange(name= 'batch_size', min=10, max=20)
-hp_3 = my_hps.numrange(name= 'lr', min=0.0001, max=0.01, type='log')
+hp_1 = my_hps.numrange(name= 'numer_hidden_layers', min=3, max=6, type='int')
+hp_2 = my_hps.numrange(name= 'batch_size', min=10, max=20, type='int')
+hp_3 = my_hps.numrange(name= 'dropout_2', min=0.1, max=0.5, type='float')
+hp_4 = my_hps.numrange(name= 'lr', min=0.0001, max=0.01, type='log')
 .
 .
 .
@@ -75,13 +77,13 @@ my_hps. remove_hp('batch_size')
 
 #### Property search_space_boundaries
 
-Return pandas dataframe that shows the initial search space boundaries.
+Return the initial search space boundaries.
 
 **Examples**
 ```python
 from aisaratuners import aisara_keras_tuner as akt
 my_hps = akt.Hp()
-hp_1 = my_hps.numrange(name= 'numer_hidden_layers', min=3, max=6, type='linear')
+hp_1 = my_hps.numrange(name= 'numer_hidden_layers', min=3, max=6)
 hp_2 = my_hps.numrange(name= 'batch_size', min=10, max=20)
 hp_3 = my_hps.numrange(name= 'lr', min=0.0001, max=0.01, type='log')
 print(my_hps.search_space_boundaries)
@@ -94,7 +96,7 @@ print(my_hps.search_space_boundaries)
 
 ### Class aisaratuners.aisara_keras_tuner.HpOptimization(hp_class=None, model_func=None, opti_paras=None, opti_objects=None, num_trials=5, rounds=3, mode = 'c', api_key= None, aisara_seed = 'variable')
 
-Initiate aisara optimizer. There will be multiple Keras models for total **n** number of trials where **n** is num_trials*rounds. The search space will be reduced into small solution areas according to the number of rounds and each round will be investigated with the multiple trials as provided by the user.
+Initiate aisara optimizer. Total of **n** number of trials will be performed where **n** is num_trials*rounds. The hyperparameters solution space will get reduced according to the number of rounds, and each round will be investigated with multiple trials as provided by the user.
 
 **Parameters:**
 * hp_class: aisaratuners.aisara_keras_tuner.Hp class
@@ -102,35 +104,35 @@ Initiate aisara optimizer. There will be multiple Keras models for total **n** n
     aisara hyperparameter class that contains user’s defined hyperparameters
 *  model_func:
 
-    a function where keras model is defined and it returns the model and the history
+    a function where the keras model is defined and it must return the model along with the history
 * opti_paras: iterable (list, tuple)
 
     iterable contains the optimization parameters, the first one is the main parameter for optimization and the second one is used as a supporting parameter [parameter1, parameter2] or (parameter1, parameter2)
     
-    parameter1 for classification can be 'val_acc', 'val_mae', 'val_mse', 'acc', 'mae', 'mse'
+    parameter1 can be 'val_acc', 'val_mae', 'val_mse', 'acc', 'mae', 'mse'
     
-    parameter2 for classification can be 'val_loss', 'loss'
+    parameter2 can be 'val_loss', 'loss'
 * opti_objects: iterable (list, tuple)
 
-    iterable contains the objective for optimization parameters [objective1, objective2] or (objective1, objective2)
+    iterable contains the objective for the optimization parameters [objective1, objective2] or (objective1, objective2)
     
     objective1 can be either 'min', 'max'
     
     objective2 can be either  'min', 'max'
 * num_trials: int, default 5
 
-    number of trials per each round, the recommended value should be between 3-10.  
+    number of trials per each round 
 * rounds: int or str,  default 3
 
-    number of rounds in which the search space is reduced.
+    number of rounds in which the hyperparameters solution space is reduced.
     
-    rounds can also be set to 'aisara_auto' where the number of rounds is chosen automatically until the best hyperparameter combinations is achieved (this option takes a longer time).
+    rounds can also be set to 'aisara_auto' where the number of rounds is chosen automatically until the best hyperparameter combinations is achieved (this option might be computationally expensive and time-consuming)
 * mode: str, default 'c'
 
-    the mode in which aisara technology is utilized for hyperparameter optimization. It can be either 'c' or 'p' where 'c' is for commercial use and aisara hyperparameter tuning API key should be provided while 'p' is for free private use.
+    the mode in which AiSara Hyperparameter Tuning API is utilized. It can be either 'c' or 'p' where 'c' is for commercial use and the API key should be provided while 'p' is for free private use
 * api_key: str
 
-    it should be provided when aisaratuners is  running for commercial use
+    it should be provided when the mode is set to 'c' 
     
     aisara hyperparameter tuning API key can be obtained from [here](https://rapidapi.com/aisara-technology-aisara-technology-default/api/aisara-hyperparameter-tuning)
      
@@ -173,7 +175,7 @@ optimizer = akt.HpOptimization(my_hps, myfunc, ['val_acc','val_loss'], ['max','m
 
 #### Function run_opti()
 
-A function to start the search for the best hyperparameter configuration, it returns the model training results, search space boundaries, hyperparameters combination, and the optimization results per each round.
+A function to run the optimization and it returns training log.
 
 **Examples**
 ```python
@@ -185,12 +187,15 @@ optimizer.run_opti()
 
 #### Property opti_results
 
-Return a dataframe that contains the optimization results for all the rounds along with the model ID.
+Return the optimization results for all the rounds along with models ID.
 
 **Examples**
 ```python
 optimizer = akt.HpOptimization(my_hps, myfunc, ['val_acc','val_loss'], ['max','min'], 5, 3, mode='p')
 optimizer.run_opti()
+.
+.
+.
 print(optimizer.opti_results)
 ```
 **output**
@@ -203,12 +208,15 @@ print(optimizer.opti_results)
 
 #### Property best_model_hps
 
-Return the hyperparameter configuration that yields the best value for the main optimization parameter.
+Return the best hyperparameters combination.
 
 **Examples**
 ```python
 optimizer = akt.HpOptimization(my_hps, myfunc, ['val_acc','val_loss'], ['max','min'], 5, 3, mode='p')
 optimizer.run_opti()
+.
+.
+.
 print(optimizer.best_model_hps)
 ```
 **output**
@@ -221,12 +229,15 @@ print(optimizer.best_model_hps)
 
 ### Property best_model
 
-Return the hyperparameter configuration that yields the best value for the main optimization parameter.
+Load the best trained model.
 
 **Examples**
 ```python
 optimizer = akt.HpOptimization(my_hps, myfunc, ['val_acc','val_loss'], ['max','min'], 5, 3, mode='p')
 optimizer.run_opti()
+.
+.
+.
 best_model = optimizer.best_model
 ```
 
@@ -242,6 +253,9 @@ return a visual representation of the optimization results for all the rounds.
 ```python
 optimizer = akt.HpOptimization(my_hps, myfunc, ['val_acc','val_loss'], ['max','min'], 5, 3, mode='p')
 optimizer.run_opti()
+.
+.
+.
 optimizer.plot_opti_results()
 ```
 **output**
@@ -256,12 +270,15 @@ optimizer.plot_opti_results()
 
 #### Function plot_search_space()
 
-return a visual representation for the hyperparameters solution space (2D, 3D).
+return a visual representation for the hyperparameters solution space.
 
 **Examples**
 ```python
 optimizer = akt.HpOptimization(my_hps, myfunc, ['val_acc','val_loss'], ['max','min'], 5, 3, mode='p')
 optimizer.run_opti()
+.
+.
+.
 optimizer.plot_opti_results()
 ```
 **output**
