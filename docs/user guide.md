@@ -175,7 +175,7 @@ optimizer = akt.HpOptimization(my_hps, myfunc, ['val_acc','val_loss'], ['max','m
 
 #### Function run_opti()
 
-A function to run the optimization and it returns training log.
+A function to run the optimization and it returns the optimization log.
 
 **Examples**
 ```python
