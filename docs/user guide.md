@@ -4,7 +4,7 @@
 
 ## 1. aisaratuners.aisara_keras_tuner
 
-a module used for keras hyperparameter optimization.
+A module used for keras hyperparameter optimization.
 
 
 
@@ -12,7 +12,7 @@ a module used for keras hyperparameter optimization.
 
 ### Class aisaratuners.aisara_keras_tuner.Hp()
 
-instantiate a hyperparameter class that acts as a container for the user’s defined hyperparameters.
+Instantiate a hyperparameter class that acts as a container for the user’s defined hyperparameters.
 
 
 
@@ -96,7 +96,7 @@ print(my_hps.search_space_boundaries)
 
 ### Class aisaratuners.aisara_keras_tuner.HpOptimization(hp_class=None, model_func=None, opti_paras=None, opti_objects=None, num_trials=5, rounds=3, mode = 'c', api_key= None, aisara_seed = 'variable')
 
-Initiate aisara optimizer. Total of **n** number of trials will be performed where **n** is num_trials*rounds. The hyperparameters solution space will get reduced according to the number of rounds, and each round will be investigated with multiple trials as provided by the user.
+Instantiate the optimizer class. Total of (n) number of trials will be performed where (n) is num_trials*rounds. The hyperparameters solution space will get reduced according to the number of rounds, and each round will be investigated with multiple trials as provided by the user.
 
 **Parameters:**
 * hp_class: aisaratuners.aisara_keras_tuner.Hp class
