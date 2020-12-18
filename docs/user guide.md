@@ -83,8 +83,8 @@ Return the initial search space boundaries.
 ```python
 from aisaratuners import aisara_keras_tuner as akt
 my_hps = akt.Hp()
-hp_1 = my_hps.numrange(name= 'numer_hidden_layers', min=3, max=6)
-hp_2 = my_hps.numrange(name= 'batch_size', min=10, max=20)
+hp_1 = my_hps.numrange(name= 'numer_hidden_layers', min=3, max=6, type='int')
+hp_2 = my_hps.numrange(name= 'batch_size', min=10, max=20, type='int')
 hp_3 = my_hps.numrange(name= 'lr', min=0.0001, max=0.01, type='log')
 print(my_hps.search_space_boundaries)
 ```
@@ -146,8 +146,8 @@ from aisaratuners import aisara_keras_tuner as akt
 
 # hp_class
 my_hps = akt.Hp()
-hp_1 = my_hps.numrange(name= 'numer_hidden_layers', min=3, max=6, type='linear')
-hp_2 = my_hps.numrange(name= 'batch_size', min=10, max=20)
+hp_1 = my_hps.numrange(name= 'numer_hidden_layers', min=3, max=6, type='int')
+hp_2 = my_hps.numrange(name= 'batch_size', min=10, max=20, type='int')
 hp_3 = my_hps.numrange(name= 'lr', min=0.0001, max=0.01, type='log')
 
 # model_func
