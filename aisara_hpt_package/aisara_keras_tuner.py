@@ -701,7 +701,7 @@ class HpOptimization:
 
     @property
     def best_model(self):
-        best_model_id = self.gen_best_model_df().iloc[:1,-1]
+        best_model_id = self.gen_best_model_df().iloc[:1,-2]
         best_model_id_list = best_model_id.tolist()
         return tf.keras.models.load_model(f'./models/{best_model_id_list[0]}.h5')
 
