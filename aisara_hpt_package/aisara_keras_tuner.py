@@ -39,15 +39,15 @@ class Hp:
         if type.lower().strip() == 'int':
             self.hps_dict_num[name.strip()] = [int(min), int(max)]
             self.num_int.append(name.strip())
-            return int(min)
+            # return int(min)
         elif type.lower().strip() == 'float':
             self.hps_dict_num[name.strip()] = [float(min),float(max)]
             self.num_float.append(name.strip())
-            return float(min)
+            # return float(min)
         elif type.lower().strip() == 'log':
             self.hps_dict_num[name.strip()] = [log10(min),log10(max)]
             self.num_log.append(name.strip())
-            return min
+            # return min
         else:
             raise UnknownArgument(f'unknown type found "{type}"... the type for numerical hyperparameters should be either "int", "float" or "log"')
 
