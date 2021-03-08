@@ -175,9 +175,9 @@ class HpOptimization:
 
     def aisara_core_fit_call(self, x, y):
         x_train = []
-        for col in x.columns:
-            for v in x[col].tolist():
-                x_train.append(v)
+        for index, row in x.iterrows():
+            for col in x.columns:
+                x_train.append(row[col])
         x_train_str = str(x_train).replace('[', '').replace(']', '')
         y_train = y.tolist()
         y_train_str = str(y_train).replace('[', '').replace(']', '')
