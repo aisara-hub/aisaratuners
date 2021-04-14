@@ -1,4 +1,4 @@
-**aisaratuners is a hyperparameter tuning library that can be used with different machine learning and deep learning python packages. It leverages AiSara algorithm, Latin hypercube sampling, and the concept of search space reduction for fast reach of the optimum hyperparameters combination.**
+**aisaratuners is a hyperparameter tuning library that can be used with different machine learning python packages. It leverages AiSara algorithm, Latin hypercube sampling, and the concept of search space reduction for fast reach of the optimum hyperparameters combination.**
 
 * **Currently available for Keras, scikit-learn and  PyTorch will be added in the coming versions**
 
