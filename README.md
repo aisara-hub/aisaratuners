@@ -1,6 +1,6 @@
-**aisaratuners is a hyperparameter tuning library that can be used with different machine learning python packages. It leverages AiSara algorithm, Latin hypercube sampling, and the concept of search space reduction for fast reach of the optimum hyperparameters combination.**
+- **aisaratuners is an open-source optimization library to automate and expedite hyperparameter search. aisaratuners has two modules, aisara_general_tuner.py which is a framework agnostic, and aisara_keras_tuner.py which is tailored for Karas API.**
 
-* **Currently available for Keras, scikit-learn and  PyTorch will be added in the coming versions**
+- **aisaratuners leverages AiSara algorithm, Latin hypercube sampling, and the concept of search space reduction for fast reach of the optimum hyperparameters.**
 
 **[aisaratuners on PyPi](https://pypi.org/project/aisaratuners/)**
 
@@ -14,4 +14,4 @@
 
 **[video description](https://www.youtube.com/watch?v=pFuyb7q28vg&feature=youtu.be&ab_channel=AiSaraEnquiry)**
 
-**[AiSara Artificial Intelligence](https://www.aisara.ai/)** 
+**[Deep Wadi (AiSara) Sdn. Bhd.](https://www.aisara.ai/)**
